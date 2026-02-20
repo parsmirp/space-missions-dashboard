@@ -1,17 +1,3 @@
----
-title: "space mission project"
-author: "PARSA MIRPOUR"
-date: "`r format(Sys.Date(), '%D')`"
-output:
-  html_document:
-    toc: yes            # table of contents
-    toc_depth: 4        # toc will include headers <= ####
-    toc_float: yes      # toc always on left of page
-    code_folding: show  # allows hiding of code
-runtime: shiny
----
-
-```{r}
 library(shiny)
 library(shinydashboard)
 library(DT)
@@ -20,10 +6,10 @@ library(plotly)
 library(dplyr)
 library(lubridate)
 library(readr)
-```
 
 
-```{r}
+
+
 # Space Missions Dashboard
 
 missions <- read_csv("space_missions.csv", show_col_types = FALSE) %>%
@@ -426,7 +412,7 @@ server <- function(input, output, session) {
 }
 
 shinyApp(ui, server)
-```
+
 
 
 
